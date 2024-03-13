@@ -1,9 +1,7 @@
 export default function main() {
   return (
     <div>
-      <div>dsafdsafdsaf</div>dsafsafdasfdsafnkjnsafkjsanfkjsanfkjanfjkanfkjnaskfjnas;kfjnakvjnakvjndsa Lorem ipsum dolor
-      sit amet consectetur adipisicing elit. Repellendus numquam aut totam odit est. Eveniet non assumenda distinctio
-      iste commodi officiis eos libero doloribus, exercitationem maiores. Voluptas dignissimos quaerat aliquid.
+      <div className="text-gray-9F">이승훈 바보</div>
     </div>
   );
 }
