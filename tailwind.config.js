@@ -22,22 +22,22 @@ module.exports = {
       colors: {
         primary: '#112D4E',
         blue: {
-          '3F': '#3F72AF',
+          '3f': '#3F72AF',
           76: '#76A5EA',
-          DB: '#DBE2EF',
+          db: '#DBE2EF',
         },
         gray: {
           78: '#787486',
-          '9F': '#9FA6B2',
-          D9: '#D9D9D9',
-          EE: '#EEEEEE',
-          FA: '#FAFAFA',
+          '9f': '#9FA6B2',
+          d9: '#D9D9D9',
+          ee: '#EEEEEE',
+          fa: '#FAFAFA',
         },
         black: {
           DEFAULT: '#000',
-          1717: '#171717',
-          3332: '#333236',
-          '4B4B': '#4B4B4B',
+          17: '#171717',
+          33: '#333236',
+          '4b': '#4B4B4B',
           overlay: 'rgba(0, 0, 0, 0.70)', // 모달창 뒷 배경
         },
         red: '#D6173A',
