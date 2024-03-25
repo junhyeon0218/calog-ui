@@ -25,19 +25,19 @@ export default function Input({ isError, inputType }: InputProps) {
       label = '이메일';
       placeholder = '이메일을 입력해 주세요';
       if (isError) errorMessage = '이메일 형식으로 작성해 주세요.';
-      size = 'w-520 h-50 ';
+      size = 'w-520';
       break;
     case 'password':
       label = '비밀번호';
       placeholder = '비밀번호를 입력해 주세요';
       if (isError) errorMessage = '8자 이상 입력해 주세요.';
-      size = 'w-520 h-50';
+      size = 'w-520';
       break;
     case 'checkPassword':
       label = '비밀번호';
       placeholder = '비밀번호를 입력해 주세요';
       if (isError) errorMessage = '비밀번호가 일치하지 않습니다.';
-      size = 'w-520 h-50';
+      size = 'w-520';
       break;
     default:
       break;
