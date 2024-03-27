@@ -2,16 +2,14 @@ import Image from 'next/image';
 import { MouseEvent, useState } from 'react';
 
 interface InputProps {
-  inputType: string;
   isError?: boolean;
+  label: string;
+  placeholder: string;
+  size: string;
+  errorMessage: string;
 }
 
-export default function Input({ isError, inputType }: InputProps) {
-  let label = '';
-  let placeholder = '';
-  let errorMessage = '';
-  let size = '';
-
+export default function Input({ isError, label, placeholder, size, errorMessage }: InputProps) {
   const [passwordType, setPasswordType] = useState('text');
   const eyeImage = passwordType === 'password' ? '/images/eye-off.png' : '/images/eye-on.png';
 
@@ -19,29 +17,6 @@ export default function Input({ isError, inputType }: InputProps) {
     e.preventDefault();
     setPasswordType((prevType: string) => (prevType === 'password' ? 'text' : 'password'));
   };
-
-  switch (inputType) {
-    case 'email':
-      label = '이메일';
-      placeholder = '이메일을 입력해 주세요';
-      if (isError) errorMessage = '이메일 형식으로 작성해 주세요.';
-      size = 'w-520';
-      break;
-    case 'password':
-      label = '비밀번호';
-      placeholder = '비밀번호를 입력해 주세요';
-      if (isError) errorMessage = '8자 이상 입력해 주세요.';
-      size = 'w-520';
-      break;
-    case 'checkPassword':
-      label = '비밀번호';
-      placeholder = '비밀번호를 입력해 주세요';
-      if (isError) errorMessage = '비밀번호가 일치하지 않습니다.';
-      size = 'w-520';
-      break;
-    default:
-      break;
-  }
 
   return (
     <div className={`relative flex flex-col items-start justify-center gap-8 ${size}`}>
@@ -51,7 +26,7 @@ export default function Input({ isError, inputType }: InputProps) {
         placeholder={`${placeholder}`}
         type={passwordType}
       />
-      {(inputType === 'password' || inputType === 'checkPassword') && (
+      {label === '비밀번호' && (
         <button className="absolute translate-y-16 right-16" type="button" onClick={handlePasswordVisible}>
           <Image width={24} height={24} src={eyeImage} alt="password toggle" sizes="24px" />
         </button>
