@@ -44,15 +44,13 @@ module.exports = {
         green: '#7AC555',
         purple: '#760DDE',
         orange: '#FFA500',
-        blue: '#76A5EA',
         pink: '#E876EA',
         white: '#FFF',
         'beige-f9': '#F9F7F7',
       },
       screens: {
-        mobile: '375px',
-        tablet: '744px',
-        pc: '1199px',
+        tablet: { max: '1199px' },
+        mobile: { max: '767px' },
       },
       fontFamily: {
         sans: ['Pretendard', 'sans-serif'],
